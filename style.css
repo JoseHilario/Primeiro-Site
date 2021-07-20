@@ -5,6 +5,10 @@
   box-sizing:border-box;
 }
 
+ul {
+  list-style:none;
+}
+
 a {
   text-decoration:none;
 }
@@ -37,7 +41,7 @@ body {
   -webkit-font-smoothing:antialiased;  
 }
 
-h2 {
+.title {
   font:700 1.875rem 'Poppins', sans-serif;
   color:var(--title-color);
   -webkit-font-smoothing:auto;
@@ -117,7 +121,59 @@ nav {
   color:var(--base-color);
 }
 
-/*===== MENU =====*/ 
+nav ul li {
+  text-align:center;
+}
+
+nav ul li a {
+  transition:color 0.2s;
+  position:relative; /* Para que o filho (abaixo) seja absoluto a ele */
+}
+
+nav ul li a:hover {
+  color:var(--base-color);
+}
+
+nav ul li a::after {
+  content:"";
+  width:0;
+  height:2px;
+  background:var(--base-color);
+  position:absolute; /* absoluto em relação ao relative acima(pai) */ 
+  left:0;
+  bottom:-1.5rem;
+  transition:width 0.2s;
+}
+
+nav ul li a:hover::after {
+  width:100%;
+}
+
+nav #menu {
+  opacity:0;
+  visibility:hidden;
+}
+
+/* Mostrar menu */
+nav.show #menu {
+  opacity:1;
+  visibility:visible;
+  background:var(--body-color);
+  height:100vh; /*viewport heigth: altura do dispositivo*/
+  width:100vw; /*viewport width: largura do dispositivo*/
+  position:fixed;
+  top:0; /* canto superior */
+  left:0; /* canto esquerdo */
+}
+
+nav.show #menu {
+  display:grid;
+  place-content:center;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
 
 /*===== HOME =====*/
 #home {
