@@ -149,13 +149,13 @@ nav ul li a:hover::after {
   width:100%;
 }
 
-nav #menu {
+nav .menu {
   opacity:0;
   visibility:hidden;
 }
 
 /* Mostrar menu */
-nav.show #menu {
+nav.show .menu {
   opacity:1;
   visibility:visible;
   background:var(--body-color);
@@ -166,7 +166,7 @@ nav.show #menu {
   left:0; /* canto esquerdo */
 }
 
-nav.show #menu {
+nav.show .menu {
   display:grid;
   place-content:center;
 }
