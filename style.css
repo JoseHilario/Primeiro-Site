@@ -108,8 +108,8 @@ nav {
   height:var(--header-height);
   align-items:center;
   display:flex;
-  height:4.5rem;
-  justify-content:space-between;   
+  justify-content:space-between;
+  border:solid red;
 }
 
 .logo {
@@ -152,6 +152,8 @@ nav ul li a:hover::after {
 nav .menu {
   opacity:0;
   visibility:hidden;
+  margin-right:-4.8rem;
+  border:solid blue;
 }
 
 /* Mostrar menu */
@@ -159,6 +161,7 @@ nav.show .menu {
   opacity:1;
   visibility:visible;
   background:var(--body-color);
+  text-align:center;
   height:100vh; /*viewport heigth: altura do dispositivo*/
   width:100vw; /*viewport width: largura do dispositivo*/
   position:fixed;
