@@ -22,7 +22,7 @@ img {
 :root {
   --header-height:4.5rem;
   /* colors */ 
-  --hue:159; /*159*/
+  --hue:240; /*159*/
   /* HSL color mode */ 
   --base-color:hsl(var(--hue) 36% 57%);
   --base-color-second:hsl(var(--hue) 65% 88%); 
@@ -109,7 +109,6 @@ nav {
   align-items:center;
   display:flex;
   justify-content:space-between;
-  border:solid red;
 }
 
 .logo {
@@ -153,7 +152,6 @@ nav .menu {
   opacity:0;
   visibility:hidden;
   margin-right:-4.8rem;
-  border:solid blue;
 }
 
 /* Mostrar menu */
@@ -176,6 +174,24 @@ nav.show .menu {
 
 nav.show ul.grid {
   gap: 4rem;
+}
+
+/* Toggle menu */
+.toggle {
+  color:var(--base-color);
+  font-size:1.5rem;
+}
+
+nav .icon-close  {
+  opacity:0;
+  visibility:hidden;
+  position:absolute;
+  right:1.5rem;
+}
+
+nav.show div.icon-close {
+  opacity:1;
+  visibility:visible;
 }
 
 /*===== HOME =====*/
