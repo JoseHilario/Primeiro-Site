@@ -85,7 +85,7 @@ main {
 }
 
 /*===== LAYOUT =====*/
-header {
+.header-1 {
   width:100%;
   border-bottom:1px solid #e4e4e4;
   margin-bottom:2rem;
@@ -256,7 +256,7 @@ nav.show div.icon-close {
   margin-bottom:2rem;
 }
 
-/*===== Section About =====*/
+/*===== Section-2 =====*/
 #about {
   background: white;
 }
@@ -293,4 +293,14 @@ nav.show div.icon-close {
 #about .text {
   margin-right: 1.5rem;
   margin-left: 1.5rem;
+}
+
+/*===== Section-3 =====*/
+#services .container {
+  margin:0;
+}
+
+#services .text {
+  margin-right:1.5rem;
+  margin-left:1.5rem;
 }
