@@ -115,6 +115,14 @@ section .title {
   margin-bottom:1rem;
 }
 
+section header {
+  margin-bottom:4rem;
+}
+
+section header strong {
+  color:var(--base-color);
+}
+
 /*===== NAVIGATION =====*/
 nav {
   width:100%;
