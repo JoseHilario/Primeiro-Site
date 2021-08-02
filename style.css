@@ -201,7 +201,7 @@ nav.show ul.grid {
 .toggle {
   color:var(--base-color);
   font-size:1.5rem;
-  cursor:pointer;
+  cursor:pointer; /* Aparece a mãozinha*/
 }
 
 nav .icon-close  {
@@ -288,3 +288,14 @@ nav.show div.icon-close {
   border-radius:0.25rem;
 }
 /*===== Section-3 =====*/
+.cards.grid {
+  gap:1.5rem;
+}
+
+.card {
+  padding:13.125rem 2rem 3.625rem;
+  box-shadow:0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom:0.25rem solid var(--base-color);
+  border-radius:0.25rem 0.25rem 0 0;
+  text-align:center;
+}
