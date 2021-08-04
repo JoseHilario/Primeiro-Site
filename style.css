@@ -153,17 +153,19 @@ nav ul li {
   text-align:center;
 }
 
-nav ul li a {
+nav ul li:hover {
+  transform:scale(1.10);
+}
+
+/*======== Função clickar =========*/ 
+
+nav.clickar ul li a {
+  color:var(--base-color);
   transition:color 0.2s;
   position:relative; /* Para que o filho (abaixo) seja absoluto a ele */
 }
 
-nav ul li a:hover {
-  color:var(--base-color);
-  transform:scale(1.12);
-}
-
-nav ul li a::after {
+nav.clickar ul li a::after {
   content:"";
   width:0;
   height:2px;
@@ -174,8 +176,11 @@ nav ul li a::after {
   transition:width 0.2s;
 }
 
-nav ul li a:hover::after {
+nav.clickar ul li a:hover::after {
+  width:100%;
 }
+
+/*===========================*/
 
 nav .menu {
   opacity:0;
