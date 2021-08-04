@@ -7,14 +7,13 @@ for (const element of toggle) {
   })
 }
 
-const links = document.querySelectorAll('nav ul li a') 
+const links = document.querySelectorAll('nav ul li a')
 
 for (const link of links) {
   link.addEventListener('click', function() {
     nav.classList.remove('show')
   })
 }
-
 
 const header_1 = document.querySelector('#header-1')
 const navHeight = header_1.offsetHeight

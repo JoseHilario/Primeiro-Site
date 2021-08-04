@@ -160,6 +160,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color:var(--base-color);
+  transform:scale(1.12);
 }
 
 nav ul li a::after {
@@ -174,7 +175,6 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
-  width:100%;
 }
 
 nav .menu {
@@ -219,7 +219,7 @@ nav.show ul.grid {
   cursor:pointer; /* Aparece a mãozinha*/
 }
 
-nav .icon-close  {
+nav .icon-close {
   opacity:0;
   visibility:hidden;
   position:absolute;
