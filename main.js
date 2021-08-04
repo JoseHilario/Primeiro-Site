@@ -1,4 +1,4 @@
-const nav = document.querySelector('header nav')
+const nav = document.querySelector('#header-1 nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
 for (const element of toggle) {
@@ -6,7 +6,6 @@ for (const element of toggle) {
     nav.classList.toggle('show')
   })
 }
-
 
 
 const header_1 = document.querySelector('#header-1')
