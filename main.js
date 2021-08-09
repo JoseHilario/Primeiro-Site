@@ -1,3 +1,4 @@
+/* Função de click que abre o menu */
 const nav = document.querySelector('#header-1 nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
@@ -7,7 +8,38 @@ for (const element of toggle) {
   })
 }
 
+/*Função de click que estiliza uma seção do menu */
+const lists = Array.from(document.querySelectorAll('nav ul li'))
 
+lists.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    lists.forEach((item) => item.classList.remove('active')) 
+    event.currentTarget.classList.add('active')
+  })
+})
+
+/* Função de scroll que detecta local da seção: está com falha */
+const section = document.querySelectorAll('section')
+
+window.addEventListener('scroll', function () {
+  for(let i = 0; i < section.length; i++) {
+    if (window.scrollY > section[i].offsetHeight) {
+      lists[i].classList.remove('active')
+      lists[i+1].classList.add('active')
+    } 
+    /* Testando o retorno do scroll: não funciona
+    else {
+      if (window.scrollY < section[i].offsetHeight) {
+        lists[i + 1].classList.remove('active')
+        lists[i].classList.add('active')
+      }
+    } */
+  }
+})
+
+
+
+/* Função de scroll que detecta a altura do nav */
 const header_1 = document.querySelector('#header-1')
 const navHeight = header_1.offsetHeight
 

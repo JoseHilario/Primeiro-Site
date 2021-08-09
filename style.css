@@ -158,7 +158,7 @@ nav ul li:hover {
 }
 
 /*======== Função clickar =========*/ 
-nav ul li a:hover{
+nav ul li.active a{
   color:var(--base-color);
   transition:color 0.2s;
   position:relative; /* Para que o filho (abaixo) seja absoluto a ele */
@@ -175,7 +175,7 @@ nav ul li a::after {
   transition:width 0.2s;
 }
 
-nav ul li a:hover::after {
+nav ul li.active a::after {
   width:100%;
 }
 
