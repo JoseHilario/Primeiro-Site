@@ -309,6 +309,7 @@ nav.show div.icon-close {
 #about .image::before {
   border-radius:0.25rem;
 }
+
 /*===== Section-3 =====*/
 .cards.grid {
   gap:1.5rem;
@@ -332,4 +333,15 @@ nav.show div.icon-close {
 .card .title {
   font-size:1.5rem;
   margin-bottom:0.75rem;
+}
+
+/*===== Section-4 =====*/
+#testimonials {
+  background:white;
+}
+
+#testimonials blockquote {
+  padding:2rem;
+  box-shadow:0px 0px 12px rgba(0, 0, 0, 0.10);
+  border-radius:0.25rem;
 }
