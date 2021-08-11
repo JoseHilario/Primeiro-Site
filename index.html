@@ -16,6 +16,9 @@
    <!-- CSS -->
    <link href="style.css" rel="stylesheet">
    
+   <!-- Biblioteca Swiper -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   
   <title>beautylason</title>
 </head>
 <body>
@@ -114,51 +117,59 @@
         <header>
           <h2 class="title">Depoimentos de quem já passou por aqui</h2>
         </header>
-        <div class="testimonials">
-          <div class="testimonials">
-            <blockquote>
-              <p>
-                <span>&ldquo;</span>
-                Que loja linda meu deus estou impressionada.
-              </p>
-              <cite>
-                <img src="assets/fotos/10.jpeg" alt="Foto de Wanessa Souza"/>
-                Wanessa Souza
-              </cite>
-            </blockquote> 
+        <div class="testimonials swiper-container">
+          <div class="swiper-wrapper">
+            <div class="testimonial swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Que loja linda meu deus estou impressionada.
+                </p>
+                <cite>
+                  <img src="assets/fotos/10.jpeg" alt="Foto de Wanessa Souza"/>
+                  Wanessa Souza
+                </cite>
+              </blockquote> 
+            </div>
+            
+            <div class="testimonial swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Que loja linda meu deus estou impressionada.
+                </p>
+                <cite>
+                  <img src="assets/fotos/56.jpeg" alt="Foto de Luiza Whait" />
+                  Luiza whait
+                </cite>
+              </blockquote>
+            </div>
+          
+            <div class="testimonial swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Que loja linda meu deus estou impressionada.
+                </p>
+                <cite>
+                  <img src="assets/fotos/26.jpeg" alt="Foto de Lorena Briks" />
+                  Lorena Briks
+                </cite>
+              </blockquote>
+            </div>
           </div>
           
-          <div class="testimonials">
-            <blockquote>
-              <p>
-                <span>&ldquo;</span>
-                Que loja linda meu deus estou impressionada.
-              </p>
-              <cite>
-                <img src="assets/fotos/56.jpeg" alt="Foto de Luiza Whait" />
-                Luiza whait
-              </cite>
-            </blockquote>
-          </div>
-          
-          <div class="testimonials">
-            <blockquote>
-              <p>
-                <span>&ldquo;</span>
-                Que loja linda meu deus estou impressionada.
-              </p>
-              <cite>
-                <img src="assets/fotos/26.jpeg" alt="Foto de Lorena Briks" />
-                Lorena Briks
-              </cite>
-            </blockquote>
-          </div>
+          <!-- If we need pagination-->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
   </main>
   
-  <!-- Project <-->
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <!-- My JS -->
   <script src="main.js"></script>
 </body>
 </html>
