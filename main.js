@@ -37,8 +37,6 @@ window.addEventListener('scroll', function () {
   }
 })
 
-
-
 /* Função de scroll que detecta a altura do nav */
 const header_1 = document.querySelector('#header-1')
 const navHeight = header_1.offsetHeight
@@ -51,3 +49,13 @@ window.addEventListener('scroll', function () {
   }
 })
   
+/* Initialize testimonials sliders(carousel) of lib swiper */
+const swiper = new Swiper('.swiper-container', { /* Object abaixo */
+  slidesPerView: 1, /* Quantos slides aparecer no viewport */
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true, /* rodar usando rodinha do mouse */
+  keyboard: true, /* rodar usando setas do teclado */
+  
+});
