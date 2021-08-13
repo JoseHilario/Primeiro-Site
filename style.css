@@ -340,8 +340,15 @@ nav.show div.icon-close {
   background:white;
 }
 
-#testimonials header { /* Como o section header bota todos os headers com margin de 4rem, esse aqui não quero */
-  margin-bottom:0;
+#testimonials header { 
+  margin-bottom:0; /* Como o section header bota todos os headers com margin de 4rem, esse aqui não quero */
+  margin-left:1.5rem;
+  margin-right:1.5rem;
+}
+
+#testimonials .container { /* Zerar container aqui para ajustar blockquote a ficar alinhado com header */
+  margin-left:0;
+  margin-right:0;
 }
 
 #testimonials blockquote {
@@ -354,7 +361,7 @@ nav.show div.icon-close {
   position:relative;
   text-indent:1.875rem;
   margin-bottom:1.5rem;
-  color:var(--title-color); /* Não gostei muito dessa cor */
+  color:var(--title-color); /* Não gostei muito dessa color: #000;or */
 }
 
 #testimonials blockquote p span {
@@ -384,11 +391,11 @@ nav.show div.icon-close {
   padding:4rem 1rem;
 }
 
-.swiper-pagination-bullet {
+.swiper-pagination-bullet { /* Tamanho das bolinhas de paginação */ 
   width:0.75rem;
   height:0.75rem;
 }
 
-.swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active /*Cor da bolinha ativada */{
   background:var(--base-color)
 }
