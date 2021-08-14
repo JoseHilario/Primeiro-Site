@@ -9,7 +9,7 @@ for (const element of toggle) {
 }
 
 /*Função de click que estiliza uma seção do menu */
-const lists = Array.from(document.querySelectorAll('nav ul li'))
+const lists = Array.from(document.querySelectorAll('nav ul .link'))
 
 lists.forEach((item) => {
   item.addEventListener('click', (event) => {

@@ -153,7 +153,7 @@ nav ul li {
   text-align:center;
 }
 
-nav ul li:hover {
+nav ul .link:hover {
   transform:scale(1.10);
 }
 
@@ -398,4 +398,9 @@ nav.show div.icon-close {
 
 .swiper-pagination-bullet-active /*Cor da bolinha ativada */{
   background:var(--base-color)
+}
+
+/*===== Section-5 =====*/
+#contact .container {
+  border:solid red;
 }
