@@ -149,7 +149,7 @@ nav {
   color:var(--base-color);
 }
 
-nav ul li {
+nav ul .link {
   text-align:center;
 }
 
@@ -350,14 +350,9 @@ nav.show div.icon-close {
   margin-bottom:0; /* como section .title bota todos os títulos com margin-bottom: 1rem; esse aqui não quero, pois é somente entre títulos e textos */
 } 
 
-#testimonials .container { /* Zerar container aqui para ajustar blockquote a ficar alinhado com header */
+#testimonials .container { /* Zerar container aqui para ajustar blockquote e ficar alinhado com header */
   margin-left:0;
   margin-right:0;
-}
-
-#testimonials .testimonials {
-  border:solid red;
-  /* aqui mexer na altura */
 }
 
 #testimonials blockquote {
@@ -410,5 +405,12 @@ nav.show div.icon-close {
 }
 
 /*===== Section-5 =====*/
-#contact .container {
+#contact .text p {
+  margin-bottom:2rem;
 }
+
+#contact div.grid {
+  gap:4rem;
+}
+
+
