@@ -18,7 +18,7 @@ lists.forEach((item) => {
   })
 })
 
-/* Função de scroll que detecta local da seção: está com falha */
+/* Função de scroll que detecta local da seção: está com falha 
 const section = document.querySelectorAll('section')
 
 window.addEventListener('scroll', function () {
@@ -33,9 +33,9 @@ window.addEventListener('scroll', function () {
         lists[i + 1].classList.remove('active')
         lists[i].classList.add('active')
       }
-    } */
+    } 
   }
-})
+}) */
 
 /* Função de scroll que detecta a altura do nav */
 const header_1 = document.querySelector('#header-1')

@@ -341,14 +341,23 @@ nav.show div.icon-close {
 }
 
 #testimonials header { 
-  margin-bottom:0; /* Como o section header bota todos os headers com margin de 4rem, esse aqui não quero */
+  margin-bottom:0; /* Como o section header bota todos os headers com margin-bottom: 4rem; esse aqui não quero, pois o swiper-container é alto */
   margin-left:1.5rem;
   margin-right:1.5rem;
 }
 
+#testimonials .title {
+  margin-bottom:0; /* como section .title bota todos os títulos com margin-bottom: 1rem; esse aqui não quero, pois é somente entre títulos e textos */
+} 
+
 #testimonials .container { /* Zerar container aqui para ajustar blockquote a ficar alinhado com header */
   margin-left:0;
   margin-right:0;
+}
+
+#testimonials .testimonials {
+  border:solid red;
+  /* aqui mexer na altura */
 }
 
 #testimonials blockquote {
@@ -402,5 +411,4 @@ nav.show div.icon-close {
 
 /*===== Section-5 =====*/
 #contact .container {
-  border:solid red;
 }
