@@ -132,7 +132,7 @@ section header strong {
 }
 
 /*===== NAVIGATION =====*/
-nav {
+.nav {
   width:100%;
   height:var(--header-height);
   align-items:center;
@@ -149,22 +149,22 @@ nav {
   color:var(--base-color);
 }
 
-nav ul .link {
+.nav ul .link {
   text-align:center;
 }
 
-nav ul .link:hover {
+.nav ul .link:hover {
   transform:scale(1.10);
 }
 
 /*======== Função clickar =========*/ 
-nav ul li.active a{
+.nav ul li.active a{
   color:var(--base-color);
   transition:color 0.2s;
   position:relative; /* Para que o filho (abaixo) seja absoluto a ele */
 }
 
-nav ul li a::after {
+.nav ul li a::after {
   content:"";
   width:0;
   height:2px;
@@ -175,13 +175,13 @@ nav ul li a::after {
   transition:width 0.2s;
 }
 
-nav ul li.active a::after {
+.nav ul li.active a::after {
   width:100%;
 }
 
 /*===========================*/
 
-nav .menu {
+.nav .menu {
   opacity:0;
   visibility:hidden;
   margin-right:-4.8rem;
@@ -189,12 +189,12 @@ nav .menu {
   transition:0.2s;
 }
 
-nav .menu ul {
+.nav .menu ul {
   display:none;
 }
 
 /* Mostrar menu */
-nav.show .menu {
+.nav.show .menu {
   opacity:1;
   visibility:visible;
   background:var(--body-color);
@@ -208,11 +208,11 @@ nav.show .menu {
   place-content:center;
 }
 
-nav.show .menu ul {
+.nav.show .menu ul {
   display:grid;
 }
 
-nav.show ul.grid {
+.nav.show ul.grid {
   gap: 4rem;
 }
 
@@ -223,7 +223,7 @@ nav.show ul.grid {
   cursor:pointer; /* Aparece a mãozinha*/
 }
 
-nav .icon-close {
+.nav .icon-close {
   opacity:0;
   visibility:hidden;
   position:absolute;
@@ -232,7 +232,7 @@ nav .icon-close {
   transition:0.2s;
 }
 
-nav.show div.icon-close {
+.nav.show div.icon-close {
   opacity:1;
   visibility:visible;
   top:1.5rem;
