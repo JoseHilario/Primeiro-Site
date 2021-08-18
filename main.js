@@ -56,6 +56,16 @@ const swiper = new Swiper('.swiper-container', { /* Object abaixo */
     el: '.swiper-pagination'
   },
   mousewheel: true, /* rodar usando rodinha do mouse */
-  keyboard: true, /* rodar usando setas do teclado */
+  keyboard: true /* rodar usando setas do teclado */
   
-});
+})
+
+/* Initialize lib Scroll Revial: see elements when the page scroll */
+const scrollreveal = ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duration: 700, /* milisegundos */
+  reset: true /* sempre ter a animação até no final e quando voltar */
+})
+
+scrollreveal.reveal(`#home .image, #home .text`, {interval:100})

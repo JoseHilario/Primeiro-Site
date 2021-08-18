@@ -413,4 +413,18 @@ nav.show div.icon-close {
   gap:4rem;
 }
 
+#contact div i {
+  font-size:1.5rem;
+  margin-right:0.625rem;
+}
+
+#contact ul li {
+  display:flex;
+  align-items:center;
+}
+
+#contact ul li i {
+  color:var(--base-color);
+}
+
 
