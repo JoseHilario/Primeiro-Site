@@ -88,6 +88,10 @@ main {
   );
 }
 
+i {
+  font-size: 1.5rem;
+}
+
 /*===== LAYOUT =====*/
 #header-1 {
   width:100%;
@@ -116,7 +120,7 @@ main {
 }
 
 section {
-  padding:5rem 0;
+  padding: 5rem 0;
 }
 
 section .title {
@@ -155,6 +159,7 @@ section header strong {
 
 .nav ul .link:hover {
   transform:scale(1.10);
+  border:solid red;
 }
 
 /*======== Função clickar =========*/ 
@@ -414,7 +419,6 @@ section header strong {
 }
 
 #contact div i {
-  font-size:1.5rem;
   margin-right:0.625rem;
 }
 
@@ -427,4 +431,30 @@ section header strong {
   color:var(--base-color);
 }
 
+/*===== Footer =====*/
+#footer {
+  padding: 5rem 0;
+  background:var(--base-color);
+}
 
+#footer .logo span {
+  color:var(--body-color);
+}
+
+#footer .logo {
+  display:inline-block; /* Por padão o display da tag a é inline, que não permite margin, por isso a mudança */
+  margin-bottom:1.5rem;
+}
+
+#footer .brand p {
+  color:var(--text-color-light);
+  margin-bottom:0.75rem;
+}
+
+#footer .social i {
+  color:var(--text-color-light);
+}
+
+#footer .social a {
+  margin-right:2rem;
+}
