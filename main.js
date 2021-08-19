@@ -57,7 +57,6 @@ const swiper = new Swiper('.swiper-container', { /* Object abaixo */
   },
   mousewheel: true, /* rodar usando rodinha do mouse */
   keyboard: true /* rodar usando setas do teclado */
-  
 })
 
 /* Initialize lib Scroll Revial: see elements when the page scroll */
