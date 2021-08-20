@@ -18,6 +18,12 @@ lists.forEach((item) => {
   })
 })
 
+for (const list of lists) {
+  list.addEventListener('click', function() {
+    nav.classList.remove('show')
+  })
+}
+
 /* Função de scroll que detecta local da seção: está com falha 
 const section = document.querySelectorAll('section')
 
