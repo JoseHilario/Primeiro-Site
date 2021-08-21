@@ -81,3 +81,13 @@ scrollreveal.reveal(
   #contact .text, #contact .links`,
   {interval:100}
 )
+
+/* Arrow up visible after scroll */
+const backToTop = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function() {
+  if(scrollY >= 560) {
+    backToTop.classList.add('show')
+  } else {
+    backToTop.classList.remove('show')
+  }
+})
