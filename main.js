@@ -66,7 +66,7 @@ const swiper = new Swiper('.swiper-container', { /* Object abaixo */
 })
 
 /* Initialize lib Scroll Revial: see elements when the page scroll */
-const scrollreveal = ScrollReveal({
+ const scrollreveal = ScrollReveal({
   origin: 'top',
   distance: '30px',
   duration: 700, /* milisegundos */
@@ -78,9 +78,10 @@ scrollreveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .links`,
+  #contact .text, #contact .links
+  #footer .brand, #footer .social`,
   {interval:100}
-)
+) 
 
 /* Arrow up visible after scroll */
 const backToTop = document.querySelector('.back-to-top')
