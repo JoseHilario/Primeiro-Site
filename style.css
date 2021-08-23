@@ -159,7 +159,6 @@ section header strong {
 
 .nav ul .link:hover {
   transform:scale(1.10);
-  transition:0.1s;
 }
 
 /*======== Função clickar =========*/ 
