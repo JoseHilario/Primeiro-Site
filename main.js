@@ -1,28 +1,26 @@
-/* Função de click que abre o menu */
 const nav = document.querySelector('#header-1 nav')
 const toggle = document.querySelectorAll('nav .toggle')
+const lists = Array.from(document.querySelectorAll('nav ul .link'))
 
+/* Função de click que abre o menu */
 for (const element of toggle) {
   element.addEventListener('click', function() {
     nav.classList.toggle('show')
   })
 }
+for (const list of lists) {
+  list.addEventListener('click', function() {
+    nav.classList.remove('show')
+  })
+}
 
 /*Função de click que estiliza uma seção do menu */
-const lists = Array.from(document.querySelectorAll('nav ul .link'))
-
 lists.forEach((item) => {
   item.addEventListener('click', (event) => {
     lists.forEach((item) => item.classList.remove('active')) 
     event.currentTarget.classList.add('active')
   })
 })
-
-for (const list of lists) {
-  list.addEventListener('click', function() {
-    nav.classList.remove('show')
-  })
-}
 
 /* Função de scroll que detecta local da seção: está com falha 
 const section = document.querySelectorAll('section')
@@ -42,18 +40,6 @@ window.addEventListener('scroll', function () {
     } 
   }
 }) */
-
-/* Função de scroll que detecta a altura do nav */
-const header_1 = document.querySelector('#header-1')
-const navHeight = header_1.offsetHeight
-
-window.addEventListener('scroll', function () {
-  if(window.scrollY >= navHeight) {
-    header_1.classList.add('scroll')
-  } else {
-    header_1.classList.remove('scroll')
-  }
-})
   
 /* Initialize testimonials sliders(carousel) of lib swiper */
 const swiper = new Swiper('.swiper-container', { /* Object abaixo */
@@ -78,17 +64,36 @@ scrollreveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .links
+  #contact .text, #contact .links,
   #footer .brand, #footer .social`,
   {interval:100}
 ) 
 
+/* Scroll detect navHeight */
+function navHeightWhenScroll() {
+  const header_1 = document.querySelector('#header-1')
+  const navHeight = header_1.offsetHeight
+
+  if(window.scrollY >= navHeight) {
+    header_1.classList.add('scroll')
+  } else {
+    header_1.classList.remove('scroll')
+  }
+}
+
 /* Arrow up visible after scroll */
-const backToTop = document.querySelector('.back-to-top')
-window.addEventListener('scroll', function() {
+function arrowUp() {
+  const backToTop = document.querySelector('.back-to-top')
+
   if(scrollY >= 560) {
     backToTop.classList.add('show')
   } else {
     backToTop.classList.remove('show')
   }
+}
+
+/* Run the 2 functions on top */
+window.addEventListener('scroll', function() {
+  navHeightWhenScroll()
+  arrowUp()
 })

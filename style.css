@@ -31,6 +31,10 @@ img {
   --text-color:hsl(0 0% 46%); 
   --text-color-light:hsl(0 0% 98%); 
   --body-color:hsl(0 0% 98%);
+
+  /* Media Queries */
+  --title-font-size:1.875rem;
+  --p-font-size:1rem;
 }
 
 /*===== BASE =====*/
@@ -46,7 +50,7 @@ body {
 }
 
 .title {
-  font:700 1.875rem 'Poppins', sans-serif;
+  font:700 var(--title-font-size) 'Poppins', sans-serif;
   color:var(--title-color);
   -webkit-font-smoothing:auto;
 }
@@ -127,6 +131,10 @@ section .title {
   margin-bottom:1rem;
 }
 
+p {
+  font-size: var(--p-font-size);
+}
+
 section header {
   margin-bottom:4rem;
 }
@@ -158,7 +166,7 @@ section header strong {
 }
 
 .nav ul .link:hover {
-  transform:scale(1.10);
+  transform:scale(1.10); /* zoom nos links do menu após mouse em cima. Descobrir pq n aparece no estilos devtools*/
 }
 
 /*======== Função clickar =========*/ 
@@ -274,10 +282,6 @@ section header strong {
 
 #home .text {
   text-align:center;
-}
-
-#home .text h2 {
-  margin-bottom:1rem;
 }
 
 #home .text p {
@@ -441,7 +445,7 @@ section header strong {
 }
 
 #footer .logo {
-  display:inline-block; /* Por padão o display da tag a é inline, que não permite margin, por isso a mudança */
+  display:inline-block; /* Por padão o display da tag a é inline, que não permite margin(também não permite várias propriedades como transform...), por isso a mudança */
   margin-bottom:1.5rem;
 }
 
@@ -456,6 +460,12 @@ section header strong {
 
 #footer .social a {
   margin-right:2rem;
+  transition:0.3s; /* Sempre quando eu quero fazer uma estilização de movimento após determinada ação, a transição sempre deve estar */
+  display:inline-block; 
+}
+
+#footer .social a:hover {
+  transform:translateY(-8px);
 }
 
 /* ==== Arrow Up ==== */
@@ -478,4 +488,24 @@ section header strong {
   visibility:visible;
   opacity:1;
   transform:translateY(0);
+}
+
+/* Media Queries(Consultas de mídia) são usados para modificar meu site ou aplicativo, dependendo do tipo geral de um dispositivo (como impressão vs tela) ou características e parâmetros específicos (como resolução de tela ou largura de exibição do navegador), dando comportamentos específicos sobre responsividade, ou seja, para que os estilos se adequem em diversos tipos de dispositivos de maneira inteligente com o break points(pontos de quebra do layout). 
+- Width Devices: 
+Extra large devices = 1200 >
+Large devices = 1023 >
+Medium devices = 767 > */
+
+/* Large devices = 992 > */
+@media(min-width: 992px) {
+  :root {
+    --title-font-size:2.25rem;
+    --p-font-size:1.125rem;
+  }
+
+  #about .title,
+  #services .title,
+  #testimonials .title {
+    text-align:center;
+  }
 }
