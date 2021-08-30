@@ -41,7 +41,6 @@ img {
 html {
   scroll-behavior:smooth; /* Anima suavemente a transição de rolagem ao clicar em links. 
   Is not supported by Safari (console problem) */ 
-  overflow-x: hidden;
   overflow-y: auto;
 }
 
@@ -50,6 +49,8 @@ body {
   color:var(--text-color);
   background:var(--body-color);
   -webkit-font-smoothing:antialiased;  
+  overflow-x: hidden;
+  overflow-y:auto;
 }
 
 .title {
