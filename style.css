@@ -49,7 +49,8 @@ body {
   background:var(--body-color);
   -webkit-font-smoothing:antialiased;  
   /* Aqui está a solução para a barra horizontal */
-  
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .title {
@@ -246,10 +247,6 @@ section header strong {
 }
 
 /*===== HOME =====*/
-#home {
-  overflow: hidden;
-}
-
 #home .image {
   position:relative;
 }
@@ -499,6 +496,10 @@ Extra large devices = 1200 > */
 @media(min-width:1200px) {
   main {
     margin-top: var(--header-height);
+  }
+
+  section {
+    padding:10rem 0;
   }
 }
 
