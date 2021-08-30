@@ -39,24 +39,23 @@ img {
 
 /*===== BASE =====*/
 html {
-  scroll-behavior:smooth; /* is not supported by Safari (console problem) */
+  scroll-behavior:smooth; /* Anima suavemente a transição de rolagem ao clicar em links. 
+  Is not supported by Safari (console problem) */ 
 }
 
 body {
-  font:400 1rem 'DM Sans', sans-serif;
+  font:400 var(--p-font-size) 'DM Sans', sans-serif;
   color:var(--text-color);
   background:var(--body-color);
   -webkit-font-smoothing:antialiased;  
+  /* Aqui está a solução para a barra horizontal */
+  
 }
 
 .title {
   font:700 var(--title-font-size) 'Poppins', sans-serif;
   color:var(--title-color);
   -webkit-font-smoothing:auto;
-}
-
-main {
-  margin-top: var(--header-height);
 }
 
 .button {
@@ -124,15 +123,11 @@ i {
 }
 
 section {
-  padding: 5rem 0;
+  padding: calc(5rem + var(--header-height)) 0;
 }
 
 section .title {
   margin-bottom:1rem;
-}
-
-p {
-  font-size: var(--p-font-size);
 }
 
 section header {
@@ -451,17 +446,23 @@ section header strong {
 
 #footer .brand p {
   color:var(--text-color-light);
-  margin-bottom:0.75rem;
 }
+
 
 #footer .social i {
   color:var(--text-color-light);
 }
 
+#footer .social {
+  grid-auto-flow:column;
+  width:fit-content;
+}
+
 #footer .social a {
-  margin-right:2rem;
   transition:0.3s; /* Sempre quando eu quero fazer uma estilização de movimento após determinada ação, a transição sempre deve estar */
   display:inline-block; 
+  display: flex;
+  text-align:center;
 }
 
 #footer .social a:hover {
@@ -491,10 +492,19 @@ section header strong {
 }
 
 /* Media Queries(Consultas de mídia) são usados para modificar meu site ou aplicativo, dependendo do tipo geral de um dispositivo (como impressão vs tela) ou características e parâmetros específicos (como resolução de tela ou largura de exibição do navegador), dando comportamentos específicos sobre responsividade, ou seja, para que os estilos se adequem em diversos tipos de dispositivos de maneira inteligente com o break points(pontos de quebra do layout). 
-- Width Devices: 
-Extra large devices = 1200 >
-Large devices = 1023 >
-Medium devices = 767 > */
+
+Width Devices: 
+
+Extra large devices = 1200 > */
+@media(min-width:1200px) {
+  main {
+    margin-top: var(--header-height);
+  }
+}
+
+/* Large devices = 1023 > */
+
+/* Medium devices = 767 > */
 
 /* Large devices = 992 > */
 @media(min-width: 992px) {
