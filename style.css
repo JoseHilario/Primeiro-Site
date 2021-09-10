@@ -35,17 +35,19 @@ img {
   /* Media Queries */
   --title-font-size:1.875rem;
   --p-font-size:1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
 }
 
 /*===== BASE =====*/
 html {
   scroll-behavior:smooth; /* Anima suavemente a transição de rolagem ao clicar em links. 
   Is not supported by Safari (console problem) */ 
-  overflow-y: auto;
 }
 
 body {
-  font:400 var(--p-font-size) 'DM Sans', sans-serif;
+  font:400 var(--p-font-size) var(--body-font);
   color:var(--text-color);
   background:var(--body-color);
   -webkit-font-smoothing:antialiased;  
@@ -54,7 +56,7 @@ body {
 }
 
 .title {
-  font:700 var(--title-font-size) 'Poppins', sans-serif;
+  font:700 var(--title-font-size) var(--title-font);
   color:var(--title-color);
   -webkit-font-smoothing:auto;
 }
@@ -149,7 +151,7 @@ section header strong {
 }
 
 .logo {
-  font:700 1.31rem 'Poppins', sans-serif;
+  font:700 1.31rem var(--title-font);
   color:var(--title-color);    
 }
 
@@ -257,14 +259,14 @@ section header strong {
   width:100%;
   background:var(--base-color-second);
   position:absolute;
-  top:-16.8%;
-  left:16.8%;
+  top:-15%;
+  left:6.8%;
   z-index:0;
 }
 
 #home .image img {
   position: relative;
-  right: 2.93rem;
+  right: 2.10rem;
 }
 
 #home .image img,
@@ -283,7 +285,7 @@ section header strong {
 /*===== Section-2 =====*/
 #about {
   background: white;
-}
+}  
 
 #about .image {
   position: relative;
@@ -291,18 +293,17 @@ section header strong {
 
 #about .image::before {
   content: '';
-  height: 100%;
+  height: 90%;
   width: 100%;
   background: var(--base-color-second);
   position: absolute;
-  top: -8.3%;
-  left: -33%;
+  top: -8.39%;
+  left: -31%;
   z-index: 0;
 }
 
 #about .image img {
   position: relative;
-  /* right: 2.93rem; Aqui, colocar ou não, não faz diferença no preview da ide*/
 }
 
 #about .image img,
@@ -494,12 +495,73 @@ Width Devices:
 
 Extra large devices = 1200 > */
 @media(min-width:1200px) {
+  /* Base */
   main {
     margin-top: var(--header-height);
   }
 
   section {
     padding:10rem 0;
+  }
+
+  .container {
+    margin-left: 7.6875rem;
+    margin-right: 7.6875rem;
+  }
+
+  /* header-1 */
+  .nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    margin-right: 0;
+  }
+
+  .nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav .menu .title {
+    font: 400 1rem var(--body-font);
+  }
+
+  .nav .icon-menu {
+    display: none;
+  }
+
+  /* home */
+  #home .container { 
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+
+  #home .text {
+    order:0; /* order só é possível por causa do display grid ou flex */
+    max-width:24rem;
+    text-align:left;
+  }
+
+  #home .image {
+    order:1;
+  }
+
+  #home .button {
+    height:3.125rem;
+  }
+
+  /* about */
+  #about .grid {
+    grid-auto-flow: column;
+    gap:4rem;
+  }
+
+  #about .container {
+    margin-left: 0;
+  }
+
+  #about .image {
+    margin-top: 4rem;
   }
 }
 
@@ -512,11 +574,5 @@ Extra large devices = 1200 > */
   :root {
     --title-font-size:2.25rem;
     --p-font-size:1.125rem;
-  }
-
-  #about .title,
-  #services .title,
-  #testimonials .title {
-    text-align:center;
   }
 }
