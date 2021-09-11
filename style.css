@@ -504,6 +504,14 @@ Extra large devices = 1200 > */
     padding:10rem 0;
   }
 
+  section #header-2,
+  section #header-3 {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .container {
     margin-left: 7.6875rem;
     margin-right: 7.6875rem;
@@ -562,6 +570,22 @@ Extra large devices = 1200 > */
 
   #about .image {
     margin-top: 4rem;
+  }
+
+  /* services */
+  #services .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #services .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* testimonials */
+  #testimonials .container {
+    margin-left: 6.80rem;
+    margin-right: 6.80rem;
   }
 }
 

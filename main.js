@@ -48,7 +48,13 @@ const swiper = new Swiper('.swiper-container', { /* Object abaixo */
     el: '.swiper-pagination'
   },
   mousewheel: true, /* rodar usando rodinha do mouse */
-  keyboard: true /* rodar usando setas do teclado */
+  keyboard: true, /* rodar usando setas do teclado */
+  breakpoints: { /* ajuste de media querie na section testimonials somente por js */
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 })
 
 /* Initialize lib Scroll Revial: see elements when the page scroll */
