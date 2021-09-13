@@ -554,7 +554,7 @@ Extra large devices = 1200 > */
     order:1;
   }
 
-  #home .image::before {
+  #home .image::before { /* Isso daqui pois em alguns smartphones de teste do devtools o before fica pequeno na lateral */
     width: 100%;
   }
 
