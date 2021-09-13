@@ -256,7 +256,7 @@ section header strong {
 #home .image::before {
   content:'';
   height:100%;
-  width:100%;
+  width:110%;
   background:var(--base-color-second);
   position:absolute;
   top:-15%;
@@ -554,7 +554,12 @@ Extra large devices = 1200 > */
     order:1;
   }
 
-  #home .button {
+  #home .image::before {
+    width: 100%;
+  }
+
+  #home .button,
+  #contact .button {
     height:3.125rem;
   }
 
@@ -586,6 +591,36 @@ Extra large devices = 1200 > */
   #testimonials .container {
     margin-left: 6.80rem;
     margin-right: 6.80rem;
+    overflow-x: hidden;
+  }
+
+  /* contact */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25.25rem;
+  }
+
+  /* #contact div.grid {
+    gap:20rem;
+  } Com gap ou sem gap??? */
+
+  /* footer */
+  footer#footer {
+    padding: 3.75rem 0;
+  }
+
+  #footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #footer .logo {
+    font-size: 2rem;
   }
 }
 
