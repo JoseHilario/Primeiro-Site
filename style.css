@@ -44,6 +44,7 @@ img {
 html {
   scroll-behavior:smooth; /* Anima suavemente a transição de rolagem ao clicar em links. 
   Is not supported by Safari (console problem) */ 
+  overflow-x:hidden; /* De alguma forma, no smartphone os sliders não obedecem ao overflow-x no body */ 
 }
 
 body {
@@ -626,7 +627,135 @@ Extra large devices = 1200 > */
 
 /* Large devices = 1023 > */
 
-/* Medium devices = 767 > */
+/* Medium devices = 767 > */ /* No modo desktop do meu device tem essa largura minima, ainda estou testando... */
+@media(min-width: 767px) {
+  main {
+    margin-top: var(--header-height);
+  }
+
+  section {
+    padding:10rem 0;
+  }
+
+  section #header-2,
+  section #header-3 {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  /* header-1 */
+  .nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    margin-right: 0;
+  }
+
+  .nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav .menu .title {
+    font: 400 1rem var(--body-font);
+  }
+
+  .nav .icon-menu {
+    display: none;
+  }
+
+  /* home */
+  #home .container { 
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+
+  #home .text {
+    order:0; /* order só é possível por causa do display grid ou flex */
+    max-width:24rem;
+    text-align:left;
+  }
+
+  #home .image {
+    order:1;
+  }
+
+  #home .image::before { /* Isso daqui pois em alguns smartphones de teste do devtools o before fica pequeno na lateral */
+    width: 100%;
+  }
+
+  #home .button,
+  #contact .button {
+    height:3.125rem;
+  }
+
+  /* about */
+  #about .grid {
+    grid-auto-flow: column;
+    gap:4rem;
+  }
+
+  #about .container {
+    margin-left: 0;
+  }
+
+  #about .image {
+    margin-top: 4rem;
+  }
+
+  /* services */
+  #services .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #services .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* testimonials */
+  #testimonials .container {
+    margin-left: 6.80rem;
+    margin-right: 6.80rem;
+    overflow-x: hidden;
+  }
+
+  /* contact */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25.25rem;
+  }
+
+  /* #contact div.grid {
+    gap:20rem;
+  } Com gap ou sem gap??? */
+
+  /* footer */
+  footer#footer {
+    padding: 3.75rem 0;
+  }
+
+  #footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #footer .logo {
+    font-size: 2rem;
+  }
+}
 
 /* Large devices = 992 > */
 @media(min-width: 992px) {
