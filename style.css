@@ -679,16 +679,24 @@ Extra large devices = 1200 > */
 
   #home .text {
     order:0; /* order só é possível por causa do display grid ou flex */
-    max-width:24rem;
+    max-width:20rem;
     text-align:left;
+    margin-right:1rem;
   }
 
   #home .image {
     order:1;
   }
+  
+  #home .image img {
+    height:20rem;
+    width:29rem;
+    margin-right:1rem;
+  }
 
   #home .image::before { /* Isso daqui pois em alguns smartphones de teste do devtools o before fica pequeno na lateral */
-    width: 100%;
+    width: 98%;
+    left:2%;
   }
 
   #home .button,
