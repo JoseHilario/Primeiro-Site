@@ -22,7 +22,7 @@ lists.forEach((item) => {
   })
 })
 
-/* Função de scroll que detecta local da seção: está com falha 
+/*Função localizar seção e selecionar automático no menu*/
 const section = document.querySelectorAll('section')
 
 window.addEventListener('scroll', function () {
@@ -30,7 +30,9 @@ window.addEventListener('scroll', function () {
     if (window.scrollY > section[i].offsetHeight) {
       lists[i].classList.remove('active')
       lists[i+1].classList.add('active')
-    } 
+    }
+  }
+})
     /* Testando o retorno do scroll: não funciona
     else {
       if (window.scrollY < section[i].offsetHeight) {
