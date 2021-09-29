@@ -21,27 +21,6 @@ lists.forEach((item) => {
     event.currentTarget.classList.add('active')
   })
 })
-
-/*Função localizar seção e selecionar automático no menu*/
-const section = document.querySelectorAll('section')
-
-window.addEventListener('scroll', function () {
-  for(let i = 0; i < section.length; i++) {
-    if (window.scrollY > section[i].offsetHeight) {
-      lists[i].classList.remove('active')
-      lists[i+1].classList.add('active')
-    }
-  }
-})
-    /* Testando o retorno do scroll: não funciona
-    else {
-      if (window.scrollY < section[i].offsetHeight) {
-        lists[i + 1].classList.remove('active')
-        lists[i].classList.add('active')
-      }
-    } 
-  }
-}) */
   
 /* Initialize testimonials sliders(carousel) of lib swiper */
 const swiper = new Swiper('.swiper-container', { /* Object abaixo */
@@ -78,9 +57,10 @@ scrollreveal.reveal(
 ) 
 
 /* Scroll detect navHeight */
+const header_1 = document.querySelector('#header-1')
+const navHeight = header_1.offsetHeight
+
 function navHeightWhenScroll() {
-  const header_1 = document.querySelector('#header-1')
-  const navHeight = header_1.offsetHeight
 
   if(window.scrollY >= navHeight) {
     header_1.classList.add('scroll')
@@ -90,8 +70,8 @@ function navHeightWhenScroll() {
 }
 
 /* Arrow up visible after scroll */
+const backToTop = document.querySelector('.back-to-top')
 function arrowUp() {
-  const backToTop = document.querySelector('.back-to-top')
 
   if(scrollY >= 560) {
     backToTop.classList.add('show')
@@ -100,8 +80,21 @@ function arrowUp() {
   }
 }
 
+/*Função localizar seção e selecionar automático no menu*/
+const sections = document.querySelectorAll('section')
+function StyleMenuLinkWhenAtSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight/8) * 4
+  
+  for(let section of sections) {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
+  }
+}
+
 /* Run the 2 functions on top */
 window.addEventListener('scroll', function() {
   navHeightWhenScroll()
   arrowUp()
+  StyleMenuLinkWhenAtSection()
 })
