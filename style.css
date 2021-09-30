@@ -169,7 +169,7 @@ section header strong {
 }
 
 /*======== Função clickar =========*/ 
-.nav ul li.active a{
+.nav ul li.active a {
   color:var(--base-color);
   transition:color 0.2s;
   position:relative; /* Para que o filho (abaixo) seja absoluto a ele */
