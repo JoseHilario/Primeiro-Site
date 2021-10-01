@@ -172,7 +172,6 @@ section header strong {
 .nav ul li.active a,
 .nav ul li a.active {
   color:var(--base-color);
-  font-weight:bold;
   transition:color 0.2s;
   position:relative; /* Para que o filho (abaixo) seja absoluto a ele */
 }
@@ -538,6 +537,11 @@ Extra large devices = 1200 > */
     font: 400 1rem var(--body-font);
   }
 
+  .nav ul li .title.active { 
+    font-weight: bold;
+    -webkit-font-smoothing:auto;
+  }
+
   .nav .icon-menu {
     display: none;
   }
@@ -631,7 +635,7 @@ Extra large devices = 1200 > */
 /* Large devices = 1023 > */
 
 /* Medium devices = 767 > */ /* No modo desktop do meu device tem essa largura minima, ainda estou testando... */
-@media(min-width: 767px) {
+@media(min-width:767px) and (max-width:1199px) {
   main {
     margin-top: var(--header-height);
   }
@@ -766,7 +770,7 @@ Extra large devices = 1200 > */
   #footer .logo {
     font-size: 2rem;
   }
-}
+} 
 
 /* Large devices = 992 > */
 @media(min-width: 992px) {
