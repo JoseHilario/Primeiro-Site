@@ -15,12 +15,12 @@ for (const list of lists) {
 }
 
 /*Função de click que estiliza uma seção do menu */
-lists.forEach((item) => {
+ lists.forEach((item) => {
   item.addEventListener('click', (event) => {
     lists.forEach((item) => item.classList.remove('active')) 
     event.currentTarget.classList.add('active')
   })
-})
+}) 
   
 /* Initialize testimonials sliders(carousel) of lib swiper */
 const swiper = new Swiper('.swiper-container', { /* Object abaixo */

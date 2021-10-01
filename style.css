@@ -169,8 +169,10 @@ section header strong {
 }
 
 /*======== Função clickar =========*/ 
-.nav ul li.active a {
+.nav ul li.active a,
+.nav ul li a.active {
   color:var(--base-color);
+  font-weight:bold;
   transition:color 0.2s;
   position:relative; /* Para que o filho (abaixo) seja absoluto a ele */
 }
@@ -186,7 +188,8 @@ section header strong {
   transition:width 0.2s;
 }
 
-.nav ul li.active a::after {
+.nav ul li.active a::after,
+.nav ul li a.active::after {
   width:100%;
 }
 
