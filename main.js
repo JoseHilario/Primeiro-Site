@@ -1,6 +1,6 @@
 const nav = document.querySelector('#header-1 nav')
 const toggle = document.querySelectorAll('nav .toggle')
-const lists = Array.from(document.querySelectorAll('nav ul .link'))
+const lists = Array.from(document.querySelectorAll('nav ul li a'))
 
 /* Função de click que abre o menu */
 for (const element of toggle) {
@@ -13,14 +13,6 @@ for (const list of lists) {
     nav.classList.remove('show')
   })
 }
-
-/*Função de click que estiliza uma seção do menu */
- lists.forEach((item) => {
-  item.addEventListener('click', (event) => {
-    lists.forEach((item) => item.classList.remove('active')) 
-    event.currentTarget.classList.add('active')
-  })
-}) 
   
 /* Initialize testimonials sliders(carousel) of lib swiper */
 const swiper = new Swiper('.swiper-container', { /* Object abaixo */

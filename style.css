@@ -169,7 +169,6 @@ section header strong {
 }
 
 /*======== Função clickar =========*/ 
-.nav ul li.active a,
 .nav ul li a.active {
   color:var(--base-color);
   transition:color 0.2s;
@@ -187,7 +186,6 @@ section header strong {
   transition:width 0.2s;
 }
 
-.nav ul li.active a::after,
 .nav ul li a.active::after {
   width:100%;
 }
