@@ -339,7 +339,7 @@ section header strong {
 
 .cards .card i:hover {
   transform: scale(1.05);
-  cursor:pointer;
+  cursor:pointer; 
 }
 
 /*===== Section-4 =====*/
