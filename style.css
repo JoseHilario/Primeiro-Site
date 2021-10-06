@@ -325,6 +325,10 @@ section header strong {
   text-align:center;
 }
 
+.cards .card:hover {
+  transform: scale(1.05);
+}
+
 .card i {
   display:block;
   font-size:5rem;
@@ -335,11 +339,6 @@ section header strong {
 .card .title {
   font-size:1.5rem;
   margin-bottom:0.75rem;
-}
-
-.cards .card i:hover {
-  transform: scale(1.05);
-  cursor:pointer; 
 }
 
 /*===== Section-4 =====*/
