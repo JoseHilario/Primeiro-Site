@@ -169,10 +169,13 @@ section header strong {
 }
 
 /*======== Função clickar =========*/ 
-.nav ul li a.active {
-  color:var(--base-color);
+.nav ul li a {
   transition:color 0.2s;
   position:relative; /* Para que o filho (abaixo) seja absoluto a ele */
+}
+
+.nav ul li a.active {
+  color:var(--base-color);
 }
 
 .nav ul li a::after {
@@ -323,10 +326,6 @@ section header strong {
   border-bottom:0.25rem solid var(--base-color);
   border-radius:0.25rem 0.25rem 0 0;
   text-align:center;
-}
-
-.cards .card:hover {
-  transform: scale(1.05); /* Não está funfando por algum motivo */
 }
 
 .card i {
