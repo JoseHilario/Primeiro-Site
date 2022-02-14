@@ -151,9 +151,14 @@ section header strong {
   justify-content:space-between;
 }
 
-.logo {
+/* .logo { 
   font:700 1.31rem var(--title-font);
   color:var(--title-color);    
+} Para logo em forma de texto! */
+
+.logo {
+  width: 13rem;
+  height: 5rem;
 }
 
 .logo span {
@@ -167,6 +172,9 @@ section header strong {
 .nav ul .link:hover {
   transform:scale(1.10); /* zoom nos links do menu após mouse em cima. Descobrir pq n aparece no estilos devtools*/
 }
+
+/* editing code for work */
+
 
 /*======== Função clickar =========*/ 
 .nav ul li a {
@@ -263,14 +271,17 @@ section header strong {
   width:110%;
   background:var(--base-color-second);
   position:absolute;
-  top:-15%;
+  top:-19%;
   left:6.8%;
   z-index:0;
 }
 
 #home .image img {
   position: relative;
-  right: 2.10rem;
+  width: 38rem;
+  height: 25rem;
+  right: 1rem;
+  top: -2rem;
 }
 
 #home .image img,
@@ -341,21 +352,21 @@ section header strong {
 }
 
 /*===== Section-4 =====*/
-#testimonials {
+/* #testimonials {
   background:white;
 }
 
 #testimonials header { 
-  margin-bottom:0; /* Como o section header bota todos os headers com margin-bottom: 4rem; esse aqui não quero, pois o swiper-container é alto */
+  margin-bottom:0; /* Como o section header bota todos os headers com margin-bottom: 4rem; esse aqui não quero, pois o swiper-container é alto 
   margin-left:1.5rem;
   margin-right:1.5rem;
 }
 
 #testimonials .title {
-  margin-bottom:0; /* como section .title bota todos os títulos com margin-bottom: 1rem; esse aqui não quero, pois é somente entre títulos e textos */
+  margin-bottom:0; /* como section .title bota todos os títulos com margin-bottom: 1rem; esse aqui não quero, pois é somente entre títulos e textos 
 } 
 
-#testimonials .container { /* Zerar container aqui para ajustar blockquote e ficar alinhado com header */
+#testimonials .container { /* Zerar container aqui para ajustar blockquote e ficar alinhado com header 
   margin-left:0;
   margin-right:0;
 }
@@ -370,7 +381,7 @@ section header strong {
   position:relative;
   text-indent:1.875rem;
   margin-bottom:1.5rem;
-  color:var(--title-color); /* Não gostei muito dessa color: #000;or */
+  color:var(--title-color); /* Não gostei muito dessa color: #000;or 
 }
 
 #testimonials blockquote p span {
@@ -384,14 +395,14 @@ section header strong {
 #testimonials cite {
   display:flex;
   align-items:center;
-  /* font-style:normal; Gostei da fonte em itálico */
+  /* font-style:normal; Gostei da fonte em itálico 
 }
 
 #testimonials cite img {
   width:2rem;
   height:2rem;
-  object-fit:cover; /* Melhorar imagem */
-  clip-path:circle(); /* Cria um contorno específico */
+  object-fit:cover; /* Melhorar imagem 
+  clip-path:circle(); /* Cria um contorno específico 
   margin-right:0.5rem;
 }
 
@@ -400,14 +411,14 @@ section header strong {
   padding:4rem 1rem;
 }
 
-.swiper-pagination-bullet { /* Tamanho das bolinhas de paginação */ 
+.swiper-pagination-bullet { /* Tamanho das bolinhas de paginação 
   width:0.75rem;
   height:0.75rem;
 }
 
-.swiper-pagination-bullet-active /*Cor da bolinha ativada */{
+.swiper-pagination-bullet-active /*Cor da bolinha ativada {
   background:var(--base-color)
-}
+} */
 
 /*===== Section-5 =====*/
 #contact .text p {
