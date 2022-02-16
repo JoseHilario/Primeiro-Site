@@ -151,18 +151,9 @@ section header strong {
   justify-content:space-between;
 }
 
-/* .logo { 
-  font:700 1.31rem var(--title-font);
-  color:var(--title-color);    
-} Para logo em forma de texto! */
-
-.logo {
-  width: 13rem;
-  height: 5rem;
-}
-
-.logo span {
-  color:var(--base-color);
+.logo1 {
+  width: 11rem;
+  height: 4rem;
 }
 
 .nav ul .link {
@@ -279,9 +270,9 @@ section header strong {
 #home .image img {
   position: relative;
   width: 38rem;
-  height: 25rem;
-  right: 1rem;
-  top: -2rem;
+  height: 18rem;
+  right: 2rem;
+  top: -1rem;
 }
 
 #home .image img,
@@ -339,11 +330,18 @@ section header strong {
   text-align:center;
 }
 
-.card i {
-  display:block;
-  font-size:5rem;
-  color:var(--base-color);
-  margin: 0 5rem 1.5rem 5rem;
+.card .img-service {
+  width: 8rem;
+  margin-bottom: 2rem;
+}
+
+.card .img1 {
+  width: 9rem;
+  margin-bottom: 1rem;
+}
+
+.card .img3 {
+  width: 9rem;
 }
 
 .card .title {
@@ -352,75 +350,6 @@ section header strong {
 }
 
 /*===== Section-4 =====*/
-/* #testimonials {
-  background:white;
-}
-
-#testimonials header { 
-  margin-bottom:0; /* Como o section header bota todos os headers com margin-bottom: 4rem; esse aqui não quero, pois o swiper-container é alto 
-  margin-left:1.5rem;
-  margin-right:1.5rem;
-}
-
-#testimonials .title {
-  margin-bottom:0; /* como section .title bota todos os títulos com margin-bottom: 1rem; esse aqui não quero, pois é somente entre títulos e textos 
-} 
-
-#testimonials .container { /* Zerar container aqui para ajustar blockquote e ficar alinhado com header 
-  margin-left:0;
-  margin-right:0;
-}
-
-#testimonials blockquote {
-  padding:2rem;
-  box-shadow:0px 0px 12px rgba(0, 0, 0, 0.10);
-  border-radius:0.25rem;
-}
-
-#testimonials blockquote p {
-  position:relative;
-  text-indent:1.875rem;
-  margin-bottom:1.5rem;
-  color:var(--title-color); /* Não gostei muito dessa color: #000;or 
-}
-
-#testimonials blockquote p span {
-  font:700 2.5rem serif;
-  position:absolute;
-  top:-0.400rem;
-  left:-1.875rem;
-  color:var(--base-color);
-}
-
-#testimonials cite {
-  display:flex;
-  align-items:center;
-  /* font-style:normal; Gostei da fonte em itálico 
-}
-
-#testimonials cite img {
-  width:2rem;
-  height:2rem;
-  object-fit:cover; /* Melhorar imagem 
-  clip-path:circle(); /* Cria um contorno específico 
-  margin-right:0.5rem;
-}
-
-.swiper-slide {
-  height: auto;
-  padding:4rem 1rem;
-}
-
-.swiper-pagination-bullet { /* Tamanho das bolinhas de paginação 
-  width:0.75rem;
-  height:0.75rem;
-}
-
-.swiper-pagination-bullet-active /*Cor da bolinha ativada {
-  background:var(--base-color)
-} */
-
-/*===== Section-5 =====*/
 #contact .text p {
   margin-bottom:2rem;
 }
@@ -446,6 +375,11 @@ section header strong {
 #footer {
   padding: 5rem 0;
   background:var(--base-color);
+}
+
+#footer .logo2 {
+  width: 13rem;
+  height: 5rem;
 }
 
 #footer .logo span {
@@ -532,6 +466,11 @@ Width Devices:
     margin-right: 7.6875rem;
   }
 
+  .logo1 {
+    width: 14rem;
+    height: 5rem;
+  }
+
   /* header-1 */
   .nav .menu {
     opacity: 1;
@@ -574,6 +513,14 @@ Width Devices:
     order:1;
   }
 
+  #home .image img {
+  position: relative;
+  width: 38rem;
+  height: 25rem;
+  right: 1rem;
+  top: -2rem;
+  }
+
   #home .image::before { /* Isso daqui pois em alguns smartphones de teste do devtools o before fica pequeno na lateral */
     width: 100%;
   }
@@ -605,13 +552,6 @@ Width Devices:
   #services .card {
     padding-left: 3rem;
     padding-right: 3rem;
-  }
-
-  /* testimonials */
-  #testimonials .container {
-    margin-left: 6.80rem;
-    margin-right: 6.80rem;
-    overflow-x: hidden;
   }
 
   /* contact */
@@ -747,12 +687,6 @@ Width Devices:
     padding-right: 3rem;
   }
 
-  /* testimonials */
-  #testimonials .container {
-    margin-left: 6.80rem;
-    margin-right: 6.80rem;
-    overflow-x: hidden;
-  }
 
   /* contact */
   #contact .container {
